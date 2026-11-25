@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <style>
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 5px 0 20px 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        button {
+            background-color: #2e856f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #006a4a;
+        }
+    </style> -->
+
+    <style>
+        .container {
+            padding: 30px;
+            margin: 0 auto;
+        }
+
+        .form-control {
+            display: block;
+            position: relative;
+            padding-left: 36px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .custom-radio {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-color: #ddd;
+            border-radius: 50%;
+        }
+
+        .form-control:hover input~.custom-radio {
+            background-color: #ccc;
+        }
+
+        .form-control input:checked~.custom-radio {
+            background-color: aqua;
+        }
+
+        .form-control input:checked~.custom-radio::after {
+            display: block;
+        }
+
+        .custom-radio::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: none;
+        }
+
+        .form-control input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .custom-checkbox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 24px;
+            width: 24px;
+            background-color: #ddd;
+        }
+
+        .custom-checkbox::after {
+            position: absolute;
+            top: 4px;
+            left: 8px;
+            width: 5px;
+            height: 10px;
+            content: '';
+            border: solid #fff;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+            display: none;
+        }
+
+        .form-control input:checked~.custom-checkbox {
+            background-color: green;
+        }
+
+        .form-control input:checked~.custom-checkbox::after {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- <form action="server.php" method="GET">
+        <label for="firstname">Firstname</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Ismingiz">
+
+        <label for="lastname">Lastname</label>
+        <input type="text" id="lastname" name="firstname" placeholder="Familiyangiz">
+
+        <label for="country">Davlat</label>
+        <select name="country" id="country">
+            <option value="uzb">O'zbekiston</option>
+            <option value="jap">Yaponiya</option>
+            <option value="usa">AQSh</option>
+        </select>
+
+        <label for="mesage">Xabar</label>
+        <textarea name="message" id="message" placeholder="Xabaringiz"></textarea>
+
+        
+
+        <button type="submit">Yuborish</button>
+    </form> -->
+
+        <form action="">
+            <h1>Style berilgan radio tugmalar</h1>
+
+            <label class="form-control">Radio 1
+                <input type="radio" name="radio" value="radio-1" checked>
+                <span class="custom-radio"></span>
+            </label>
+
+            <label class="form-control">Radio 2
+                <input type="radio" name="radio" value="radio-2">
+                <span class="custom-radio"></span>
+            </label>
+
+            <label class="form-control">Radio 3
+                <input type="radio" name="radio" value="radio-3">
+                <span class="custom-radio"></span>
+            </label>
+
+            <label class="form-control">Ckeckbox 1
+                <input type="checkbox" name="checkbox" value="chackbox-1">
+                <span class="custom-checkbox"></span>
+            </label>
+
+            <label class="form-control">Ckeckbox 1
+                <input type="checkbox" name="checkbox" value="chackbox-1">
+                <span class="custom-checkbox"></span>
+            </label>
+        </form>
+
+    </div>
+</body>
+
+</html>
